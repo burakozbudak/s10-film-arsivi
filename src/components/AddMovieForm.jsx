@@ -24,10 +24,9 @@ const AddMovieForm = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // sayfanın yenilenmesini engelle
     const nanoid = customAlphabet("1234567890", 4);
     const newMovieId = Number(nanoid());
-    // sayfanın yenilenmesini engelle
     // bu değeri id olarak formdan gelen filme ekle
     const newMovie = {
       ...movie,
