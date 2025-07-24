@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { customAlphabet } from "nanoid";
+import { useDispatch } from "react-redux";
+import { addMovie } from "../store/actions";
 
-const AddMovieForm = (props) => {
+const AddMovieForm = () => {
   const { push } = useHistory();
+  const dispatch = useDispatch();
 
   const [movie, setMovie] = useState({
     title: "",
@@ -21,10 +24,18 @@ const AddMovieForm = (props) => {
   };
 
   const handleSubmit = (e) => {
+    e.preventDefault();
     const nanoid = customAlphabet("1234567890", 4);
     const newMovieId = Number(nanoid());
     // sayfanın yenilenmesini engelle
     // bu değeri id olarak formdan gelen filme ekle
+    const newMovie = {
+      ...movie,
+      id: newMovieId,
+      metascore: Number(movie.metascore),
+    };
+    dispatch(addMovie(newMovie));
+    push("/movies");
   };
 
   const { title, director, genre, metascore, description } = movie;

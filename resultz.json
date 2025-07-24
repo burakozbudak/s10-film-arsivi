@@ -1,0 +1,49 @@
+{
+  "stats": "9 passed, 2 failed out of 11",
+  "tests": [
+    {
+      "name": "Favorileri Gizle butonu tıklandığında favori panelini gizliyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "Favorileri Gizle butonu metni, ilgili durum değerline göre 'Favorileri göster' ve 'Favorileri gizle' arasında değişiyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "Tüm filmler ekranda gösteriliyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "Detay butonu tıklandığında ilgili film detayları gösteriliyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "Film detayları sayfasında Favorilere Ekle butonu filmi favori listesine ekliyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "Favorilerden çıkar butonu filmi favori listesinden çıkarıyor mu?",
+      "state": "fail"
+    },
+    {
+      "name": "Film detayları sayfasında Favorilere Ekle butonu filmi favori listesine 2. kez eklemiyor mu?",
+      "state": "fail"
+    },
+    {
+      "name": "Sil butonu filmi siliyor ve tüm filmler sayfasına yönlendiriliyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "Yeni film ekleniyor ve tüm filmler sayfasına yönlendiriliyor mu?",
+      "state": "pass"
+    },
+    {
+      "name": "AddMovieForm componentinde preventDefault kullanılmış mı?",
+      "state": "pass"
+    },
+    {
+      "name": "store.js dosyasında redux-logger kullanılmış mı?",
+      "state": "pass"
+    }
+  ]
+}
